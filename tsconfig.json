@@ -33,6 +33,10 @@
     // "noPropertyAccessFromIndexSignature": true,
 
     // Recommended Options
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "strict": true,
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true,

@@ -1,8 +1,18 @@
-import { app } from "./server.js";
+import { PrismaClient } from "@prisma/client";
+import fastify from "fastify";
 
-app.listen({
-    host: '0.0.0.0',
-    port: 3333
-}).then(()=>{
-    console.log("Server is running on port 3333");
+export const app = fastify();
+
+const prisma = new PrismaClient();
+
+prisma.user.create({
+    data:{
+        name: "Vanessa Scarf",
+        email: "vanessa.scarf@gmail.com.br"
+    }
 })
+
+
+
+
+

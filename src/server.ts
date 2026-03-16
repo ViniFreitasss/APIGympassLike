@@ -1,3 +1,9 @@
-import fastify from "fastify";
+import { app } from "./app.js";
+import { env } from "./env/index.js";
 
-export const app = fastify();
+app.listen({
+    host: '0.0.0.0',
+    port: env.PORT
+}).then(()=>{
+    console.log("Server is running on port 3333");
+})
